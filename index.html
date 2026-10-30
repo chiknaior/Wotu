@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Warriors of the Universe – Enciclopédia</title>
+<link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+<style id="css">
+:root{--bg:#eeedf7;--surf:#fff;--ink:#1b1840;--mute:#5d5a86;--line:#d6d3ec;--hd:#171446;--hdink:#f4f2ff;--gold:#b87a00;--aura:#0a84a0;--chip:#e6e3f6;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0e0c2b;--surf:#18154a;--ink:#ece9ff;--mute:#a7a3d6;--line:#2f2b69;--hd:#07061c;--gold:#f6b73c;--aura:#35d0e8;--chip:#26226a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#0e0c2b;--surf:#18154a;--ink:#ece9ff;--mute:#a7a3d6;--line:#2f2b69;--hd:#07061c;--gold:#f6b73c;--aura:#35d0e8;--chip:#26226a;color-scheme:dark}
+*{box-sizing:border-box}html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 110px)}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Source Serif 4",Georgia,serif}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hd);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--hd);color:var(--hdink);padding:10px 14px 0}
+.bar{display:flex;gap:12px;align-items:center;max-width:960px;margin:auto}
+.logo{font:700 20px/1 Rajdhani,system-ui,sans-serif;letter-spacing:.04em;color:var(--hdink);text-decoration:none;white-space:nowrap}
+.logo b{color:var(--gold)}
+input,select,textarea{font:inherit;color:var(--ink);background:var(--surf);border:1px solid var(--line);border-radius:6px;padding:8px 10px;width:100%}
+header input{background:#ffffff1c;border-color:#ffffff33;color:#fff;padding:7px 10px}
+header input::placeholder{color:#c9c5ee}
+nav{display:flex;gap:4px;overflow-x:auto;max-width:960px;margin:8px auto 0}
+nav a{font:600 15px Rajdhani,system-ui,sans-serif;color:#c9c5ee;text-decoration:none;padding:8px 12px;white-space:nowrap;border-bottom:3px solid transparent}
+nav a.on{color:#fff;border-color:var(--gold)}
+main{max-width:960px;margin:auto;padding:18px 14px 60px}
+.hero{position:relative;text-align:center;padding:44px 10px 38px;overflow:hidden;border-radius:10px;background:var(--hd);color:var(--hdink);margin-bottom:20px}
+.hero::before{content:"";position:absolute;inset:50% auto auto 50%;width:520px;height:520px;transform:translate(-50%,-50%);background:repeating-radial-gradient(circle,#f6b73c55 0 2px,transparent 2px 46px),radial-gradient(circle,#f6b73c44,transparent 62%)}
+.hero>*{position:relative}
+h1,h2,h3{font-family:Rajdhani,system-ui,sans-serif;line-height:1.15;margin:0}
+.hero h1{font-size:clamp(34px,8vw,60px);letter-spacing:.03em}
+.hero p{margin:10px auto 0;max-width:46ch;color:#d8d4f7}
+h2{font-size:26px;border-bottom:1px solid var(--line);padding-bottom:4px;margin:26px 0 12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
+.tile{display:block;text-decoration:none;color:inherit;background:var(--surf);border:1px solid var(--line);border-radius:8px;padding:14px}
+.tile strong{font:700 20px Rajdhani,sans-serif;display:block;color:var(--aura)}
+.tile span{color:var(--mute);font-size:14px}
+ul.list{list-style:none;margin:0;padding:0}
+ul.list li{border-bottom:1px solid var(--line);padding:10px 0}
+ul.list a{color:var(--aura);font-weight:600;text-decoration:none;font-size:18px}
+ul.list small{display:block;color:var(--mute)}
+article{background:var(--surf);border:1px solid var(--line);border-radius:10px;padding:20px 18px}
+article h1{font-size:34px}
+.cat{color:var(--mute);margin:2px 0 14px;font-size:15px}
+.info{float:right;width:min(260px,100%);margin:0 0 14px 18px;border:1px solid var(--line);background:var(--bg);border-radius:8px;overflow:hidden;font-size:15px}
+.info div{display:flex;gap:10px;padding:6px 10px;border-top:1px solid var(--line)}
+.info div:first-child{border-top:0;background:var(--chip);font:700 16px Rajdhani,sans-serif;justify-content:center}
+.info b{min-width:84px;color:var(--mute);font-weight:600}
+@media (max-width:560px){.info{float:none;margin:0 0 14px;width:100%}}
+article p{margin:0 0 14px}
+a.w{color:var(--aura)}
+.pn{display:flex;justify-content:space-between;gap:10px;margin-top:22px;clear:both}
+.btn{font:600 15px Rajdhani,sans-serif;background:var(--gold);color:#17120a;border:0;border-radius:6px;padding:8px 14px;cursor:pointer;text-decoration:none;display:inline-block}
+.btn.g{background:var(--chip);color:var(--ink)}.btn.d{background:#b3261e;color:#fff}
+.row{display:flex;gap:8px;flex-wrap:wrap;margin:12px 0}
+form label{display:block;margin:10px 0 4px;color:var(--mute);font-size:15px}
+textarea{min-height:140px}
+.msg{color:var(--mute);padding:20px 0}
+:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+</style></head><body>
+<header><div class="bar"><a class="logo" href="#inicio">WARRIORS <b>OF THE</b> UNIVERSE</a><input id="q" type="search" placeholder="Pesquisar na enciclopédia" aria-label="Pesquisar"></div><nav id="nav"></nav></header>
+<main id="app"><p class="msg">Carregando…</p></main>
+<script id="data" type="application/json">[{"body": "Tudo começou na noite em que as três luas de Vyra se alinharam. Kaelor, um jovem lutador sem nome, sentiu pela primeira vez a [[Aura]] correr pelo corpo.\n\nO que ele ainda não sabia é que aquele brilho dourado seria visto por todo o universo.", "cat": "capitulos", "info": "Arco: Origem\nLocal: [[Planeta Vyra]]", "order": 1, "title": "O Despertar da Aura", "id": "cap1"}, {"body": "Guerreiros de todos os cantos chegaram à [[Arena Selene]] para o maior torneio já visto. Kaelor encarou seu primeiro rival, e descobriu que força não era tudo.", "cat": "capitulos", "info": "Arco: Origem\nLocal: [[Arena Selene]]", "order": 2, "title": "O Torneio das Três Luas", "id": "cap2"}, {"body": "Povo nativo de Vyra, conhecido pela afinidade natural com a [[Aura]]. Crescem rápido e treinam desde crianças.", "cat": "especies", "info": "Origem: [[Planeta Vyra]]\nVida média: 300 anos\nTraço: Aura dourada", "order": 0, "title": "Vyrano", "id": "esp1"}, {"body": "A energia vital que todo guerreiro pode aprender a controlar. A cor e a força variam de pessoa para pessoa.", "cat": "especies", "info": "Tipo: Energia vital", "order": 0, "title": "Aura", "id": "ite0"}, {"body": "Fragmento raro que guarda energia pura. Quem o segura sente a [[Aura]] pulsar mais forte.", "cat": "itens", "info": "Raridade: Lendário\nEfeito: Amplifica a Aura", "order": 0, "title": "Cristal de Aura", "id": "ite1"}, {"body": "Planeta de campos dourados e montanhas flutuantes, lar dos Vyranos. Suas três luas se alinham uma vez por ciclo.", "cat": "locais", "info": "Tipo: Planeta\nLuas: 3\nHabitantes: [[Vyrano]]", "order": 0, "title": "Planeta Vyra", "id": "loc1"}, {"body": "Arena gigante construída sobre um lago de vidro, palco do torneio mais famoso do universo.", "cat": "locais", "info": "Tipo: Arena\nPlaneta: [[Planeta Vyra]]", "order": 0, "title": "Arena Selene", "id": "loc2"}, {"body": "Kaelor é o protagonista do RP. Começou como lutador sem nome e despertou a [[Aura]] durante o [[O Despertar da Aura]].\n\nÉ conhecido pela teimosia e por nunca recuar de um desafio.", "cat": "personagens", "info": "Espécie: [[Vyrano]]\nOrigem: [[Planeta Vyra]]\nPoder: Aura dourada\nStatus: Ativo", "order": 0, "title": "Kaelor", "id": "per1"}, {"body": "Mestra veterana que treina novos guerreiros na [[Arena Selene]].", "cat": "personagens", "info": "Espécie: [[Vyrano]]\nOrigem: [[Planeta Vyra]]\nPapel: Mestra de combate", "order": 0, "title": "Mira Zenn", "id": "per2"}, {"body": "Marco inicial do universo do RP. Ocorre o [[O Despertar da Aura]].", "cat": "timeline", "info": "Ano: 1", "order": 1, "title": "Alinhamento das Três Luas", "id": "tl1"}]</script>
+<script id="code">
+const CATS=[["capitulos","Capítulos","Capítulo"],["personagens","Personagens","Personagem"],["especies","Espécies","Espécie"],["locais","Locais","Local"],["itens","Itens","Item"],["timeline","Linha do tempo","Evento"]];
+const $=s=>document.querySelector(s),app=$("#app");
+let E=JSON.parse(document.getElementById("data").textContent),admin=false,art=null,editing=null,ready=true,delArm=false,note="";
+const HEAD='<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><title>Warriors of the Universe – Enciclopédia</title><link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@500;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">';
+const SHELL='<header><div class="bar"><a class="logo" href="#inicio">WARRIORS <b>OF THE</b> UNIVERSE</a><input id="q" type="search" placeholder="Pesquisar na enciclopédia" aria-label="Pesquisar"></div><nav id="nav"></nav></header><main id="app"><p class="msg">Carregando…</p></main>';
+function build(){const css=document.getElementById("css").textContent,code=document.getElementById("code").textContent,json=JSON.stringify(E).replace(/</g,"\\u003c");
+ return `<!doctype html>\n<html lang="pt-BR"><head>${HEAD}<style id="css">${css}</style></head><body>${SHELL}<script id="data" type="application/json">${json}<\/script>\n<script id="code">${code}<\/script></body></html>`}
+async function persist(){try{await art.publish(build())}catch(x){if(x&&x.code==="conflict")return;const m=$("#fm");if(m)m.textContent="Não foi possível salvar. Tente de novo."}}
+const esc=s=>String(s==null?"":s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const cl=k=>CATS.find(c=>c[0]===k)||CATS[0];
+const sorted=k=>E.filter(e=>e.cat===k).sort((a,b)=>(k==="capitulos"||k==="timeline")?(a.order-b.order):a.title.localeCompare(b.title));
+function wiki(t){return esc(t).replace(/\[\[(.+?)\]\]/g,(m,n)=>{const f=E.find(e=>e.title.toLowerCase()===n.toLowerCase());return f?`<a class="w" href="#e-${f.id}">${n}</a>`:n})}
+function nav(h){$("#nav").innerHTML=`<a href="#inicio" class="${h==="inicio"?"on":""}">Início</a>`+CATS.map(c=>`<a href="#c-${c[0]}" class="${h==="c-"+c[0]?"on":""}">${c[1]}</a>`).join("")}
+function item(e){return `<li><a href="#e-${e.id}">${esc(e.title)}</a><small>${cl(e.cat)[2]}${e.cat==="capitulos"?" "+e.order:""}${e.info?" · "+esc(e.info.split("\n")[0]):""}</small></li>`}
+function newBtn(k){return admin?`<div class="row"><button class="btn" data-a="new" data-k="${k||"capitulos"}">+ Adicionar</button></div>`:""}
+function render(){
+ const h=location.hash.slice(1)||"inicio",q=$("#q").value.trim().toLowerCase();nav(h);
+ if(editing)return form();
+ if(!ready){app.innerHTML='<p class="msg">Carregando…</p>';return}
+ if(q){const r=E.filter(e=>(e.title+" "+e.body+" "+e.info).toLowerCase().includes(q));app.innerHTML=`<h2>Resultados para “${esc(q)}”</h2>`+(r.length?`<ul class="list">${r.map(item).join("")}</ul>`:'<p class="msg">Nada encontrado.</p>');return}
+ if(h.startsWith("c-")){const k=h.slice(2),c=cl(k);app.innerHTML=`<h2>${c[1]}</h2>${newBtn(k)}`+(sorted(k).length?`<ul class="list">${sorted(k).map(item).join("")}</ul>`:'<p class="msg">Ainda não há nada aqui.</p>');return}
+ if(h.startsWith("e-")){const e=E.find(x=>x.id===h.slice(2));if(!e){app.innerHTML='<p class="msg">Página não encontrada.</p>';return}
+  const rows=(e.info||"").split("\n").filter(Boolean).map(l=>{const i=l.indexOf(":");return i>0?`<div><b>${esc(l.slice(0,i))}</b><span>${wiki(l.slice(i+1).trim())}</span></div>`:""}).join("");
+  const paras=(e.body||"").split(/\n\s*\n/).map(p=>`<p>${wiki(p)}</p>`).join("");
+  let pn="";if(e.cat==="capitulos"||e.cat==="timeline"){const l=sorted(e.cat),i=l.indexOf(e);pn=`<div class="pn"><span>${l[i-1]?`<a class="btn g" href="#e-${l[i-1].id}">‹ ${esc(l[i-1].title)}</a>`:""}</span><span>${l[i+1]?`<a class="btn g" href="#e-${l[i+1].id}">${esc(l[i+1].title)} ›</a>`:""}</span></div>`}
+  app.innerHTML=`<article><h1>${esc(e.title)}</h1><div class="cat">${cl(e.cat)[2]}${e.cat==="capitulos"?" "+e.order:""}</div>${rows?`<div class="info"><div>${esc(e.title)}</div>${rows}</div>`:""}${paras}${pn}${admin?`<div class="row"><button class="btn g" data-a="edit" data-id="${e.id}">Editar</button><button class="btn d" data-a="del" data-id="${e.id}">${delArm?"Confirmar exclusão":"Excluir"}</button></div>`:""}</article>`;return}
+ const last=[...E].slice(-5).reverse();
+ app.innerHTML=`<section class="hero"><h1>Warriors of the Universe</h1><p>A enciclopédia do RP: capítulos, guerreiros, espécies, mundos e relíquias do universo.</p></section>
+ <div class="grid">${CATS.map(c=>`<a class="tile" href="#c-${c[0]}"><strong>${c[1]}</strong><span>${E.filter(e=>e.cat===c[0]).length} páginas</span></a>`).join("")}</div>
+ ${E.length?`<h2>Adicionados por último</h2><ul class="list">${last.map(item).join("")}</ul>`:'<p class="msg">A enciclopédia ainda está vazia.</p>'}${newBtn()}`}
+function form(){const e=editing;
+ app.innerHTML=`<h2>${e.id?"Editar página":"Nova página"}</h2><form id="f"><label>Categoria</label><select id="fc">${CATS.map(c=>`<option value="${c[0]}" ${c[0]===e.cat?"selected":""}>${c[2]}</option>`).join("")}</select>
+ <label>Título</label><input id="ft" value="${esc(e.title)}">
+ <label>Número (ordem do capítulo ou ano na linha do tempo)</label><input id="fo" type="number" value="${e.order||0}">
+ <label>Ficha lateral (uma linha por item, assim: Raça: Humano)</label><textarea id="fi">${esc(e.info)}</textarea>
+ <label>Texto (separe parágrafos com linha em branco; use [[Título]] para ligar a outra página)</label><textarea id="fb" style="min-height:240px">${esc(e.body)}</textarea>
+ <div class="row"><button type="button" class="btn" data-a="save">Salvar</button><button type="button" class="btn g" data-a="cancel">Cancelar</button></div><p class="msg" id="fm">${esc(note)}</p></form>`}
+async function save(){
+ const t=$("#ft").value.trim();if(!t){$("#fm").textContent="Dê um título à página.";return}
+ const id=editing.id||"e"+Date.now().toString(36),d={cat:$("#fc").value,title:t,order:+$("#fo").value||0,info:$("#fi").value,body:$("#fb").value};
+ const n={id,...d},i=E.findIndex(x=>x.id===id);if(i<0)E.push(n);else E[i]=n;editing=null;note="";location.hash="e-"+id;render();await persist()}
+document.addEventListener("click",async ev=>{const b=ev.target.closest("[data-a]");if(!b)return;const a=b.dataset.a;
+ if(a==="new"){editing={cat:b.dataset.k,title:"",order:sorted(b.dataset.k).length+1,info:"",body:""};render()}
+ if(a==="edit"){editing={...E.find(e=>e.id===b.dataset.id)};render()}
+ if(a==="cancel"){editing=null;render()}
+ if(a==="save")save();
+ if(a==="del"){if(!delArm){delArm=true;render();return}delArm=false;E=E.filter(e=>e.id!==b.dataset.id);location.hash="inicio";render();await persist()}});
+$("#q").addEventListener("input",render);window.addEventListener("hashchange",()=>{delArm=false;$("#q").value="";render()});
+(async()=>{render();
+ try{const u=await claude.use("user");art=await claude.use("artifact");admin=!!(u&&art&&await u.canEdit());if(admin)render()}catch(x){}})();
+</script></body></html>
